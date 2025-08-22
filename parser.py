@@ -112,21 +112,6 @@ class Parser:
         return self.river_bet
 
 
-fn = ('newfile1.txt')
-obj = Parser(fn)
-dicpf = obj.PREFLOP()
-dicf = obj.FLOP()
-dicr = obj.TURN()
-dictr = obj.RIVER()
-print(dicpf)
-print(dicf)
-print(dictr)
-print(dicr)
-
-
-
-
-
 
 
 
