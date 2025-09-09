@@ -1,121 +1,103 @@
+#The betdic{} for cases where hero bets/calls/raises-has the pot after the hero has bet
+#handle ',' in bet amounts
+import re
+from dataclasses import dataclass
+@dataclass
 class Parser:
-    def __init__(self, fn):
-        self.Small_blind = None
-        self.Big_blind = None
-        self.Player_name = None
-        self.H1 = None
-        self.H2 = None
-        self.Round_folded = None
-        self.preflop_bet = None
-        self.flop_bet = None
-        self.turn_bet = None
-        self.river_bet = None
-        self.blind = None
-        self.pot = None
-        
-          
-        fh = open(fn, 'r', errors='replace')
-        self.lines = fh.readlines()
-        for line in self.lines:
-            if not line.startswith('PokerStars Hand'):
-                continue
-            self.Small_blind, self.Big_blind = line.split('(')[1].split('I')[0].split('/')
-            self.Big_blind = self.Big_blind.split('₹')[1]
-            self.Small_blind = self.Small_blind.split('₹')[1]
+        fn='new1.txt'
+        Small_Blind = None
+        Big_Blind = None
+        Player_name = None
+        Hands = None
+        Round_folded = None
+        pot = 0.0
+        preflop_bet = None
+        flop_bet = None
+        turn_bet = None
+        river_bet = None
+        blind = None
+        lines=open(fn, 'r', errors='replace').readlines()
 
-        for line in self.lines:
-            if not 'Dealt' in line:
-                continue
-            self.Player_name = line.split('to')[1].split('[')[0].strip()
-            Hand = line.split('to')[1].split('[')[1].split(']')[0]
-            self.H1 = Hand.split(' ')[0]
-            self.H2 = Hand.split(' ')[1]
-            self.Round_folded = 'PREFLOP'
-        self.pot = int(self.Big_blind) + int(self.Small_blind)
-    
-        self.isblind()
-    
-    def isblind(self):
+        def __post_init__(self):
+             
             for line in self.lines:
-                if 'posts small blind' in line  and self.Player_name in line:
-                    self.blind = 'small blind'
-                elif 'posts big blind' in line  and self.Player_name in line:
-                    self.blind = 'big blind'
-                
-
-    def betlog(self, street):
-        
-        betdic = {}
-        count=0
-        i=0
-        
-        for line in self.lines:
-            if street not in line:
-              count+=1
-            elif line.startswith('*') and  street in line:
-              break
-        
-        count1=0
-
-        for line in self.lines:
-                if count1 < count:
-                    count1+=1
+                p='^PokerStars Hand'
+                if not re.match(p,line):
                     continue
-                elif line.startswith('*') and street in line:
-                    continue
-                elif line.startswith('*') and street not in line:
-                    break
-                elif 'calls' in line:
-                   self.pot += float(line.split('calls')[1].split('₹')[1].split()[0])
-                  
-                   if self.Player_name in line:
-                        i += 1
-                        betdic[f"bet{i}"] = [float(line.split('calls')[1].split('₹')[1].split()[0]), int(self.pot)]
-                elif 'bets' in line:
-                   self.pot += float(line.split('bets')[1].split('₹')[1].split()[0])
-                  
-                   if self.Player_name in line:
-                        i += 1
-                        betdic[f"bet{i}"] = [float(line.split('bets')[1].split('₹')[1].split()[0]), int(self.pot)]
-                elif 'raises' in line:   
+                blind=r'₹(\d+)'
+                blinds=re.findall(blind,line)
+                self.Small_Blind,self.Big_Blind=blinds
+                print(self.Small_Blind,self.Big_Blind)
+         
+            for line in self.lines:
+                    p='Dealt'
+                    if re.search(p,line)==None:
+                        continue
+                    self.Player_name=re.findall(r'to(.+)\[',line)[0].strip()
+                    p=r'\[([a-zA-Z0-9]+).([a-zA-Z0-9]+)\]'
+                    self.Hands=re.search(p,line)
+                    self.Hands=self.Hands.groups()
+                    self.Round_folded = 'PREFLOP'
+                    self.pot = int(self.Big_Blind) + int(self.Small_Blind)
                    
-                   self.pot += float(line.split('to')[1].split('₹')[1].split()[0])
-                   if self.Player_name in line:
-                        i += 1
-                        betdic[f"bet{i}"] = [float(line.split('to')[1].split('₹')[1].split()[0]), int(self.pot)]
-                elif 'checks' in line and self.Player_name in line and self.Big_blind and street == 'HOLE':
-                        
-                        
-                        betdic[f"bet{i}"] = [self.Big_blind, int(self.pot)]
-                elif 'folds' in line and self.Player_name in line:
-                    self.Round_folded = street
-                    break
-                  
-                
-       
-        return betdic  
 
-    def PREFLOP(self):
-        self.preflop_bet = self.betlog('HOLE')
-        return self.preflop_bet
+        def betlog(self, street):
+             betdic = {}
+             i=0
+             p=rf'^\*+\W+{street}'
+             q=r'₹(\d+)'
+             for idx,line in enumerate(self.lines):
+                   if not re.match(p,line):
+                         continue
+                   elif re.match(p,line):
+                         for subline in self.lines[idx+1:]:
+                            if re.match('^\*+',subline):
+                                break
+                            
+                            elif 'calls' in subline:
+                                self.pot += float(re.findall(q,subline)[0])
+                                        
+                                if self.Player_name in subline:
+                                    i += 1
+                                    betdic[f"call{i}"] = [float(re.findall(q,subline)[0]), int(self.pot)]
+                            elif 'bets' in subline:
+                                self.pot += float(re.findall(q,subline)[0])
+                                if self.Player_name in subline:
+                                    i += 1
+                                    betdic[f"bet{i}"] = [float(re.findall(q,subline)[0]), int(self.pot)]
+                            elif 'raises' in subline:   
+                                    
+                                self.pot += float(re.findall(r'to\W+₹\W*(\d+)',subline)[0])
+                                if self.Player_name in subline:
+                                    i += 1
+                                    betdic[f"raise{i}"] = [float(re.findall(r'to\W+₹\W*(\d+)',subline)[0]), int(self.pot)]
+                                        
+                            elif 'folds' in subline and self.Player_name in subline:
+                                self.Round_folded = street
+                                break
 
-    def FLOP(self):
-        self.flop_bet = self.betlog('FLOP')
-        return self.flop_bet
+             return(betdic)  
 
-    def TURN(self):
-        self.turn_bet = self.betlog('TURN')
-        return self.turn_bet
+        def PREFLOP(self):
+            self.preflop_bet = self.betlog('HOLE')
+            return self.preflop_bet
+            
 
-    def RIVER(self):
-        self.river_bet = self.betlog('RIVER')
-        return self.river_bet
+        def FLOP(self):
+            self.flop_bet = self.betlog('FLOP')
+            return self.flop_bet
+            
 
+        def TURN(self):
+            self.turn_bet = self.betlog('TURN')
+            return self.turn_bet
+            
 
+        def RIVER(self):
+            self.river_bet = self.betlog('RIVER')
+            return self.river_bet
+           
+            
 
-
-
-        
-    
 
 
