@@ -1,5 +1,5 @@
 #The betdic{} for cases where hero bets/calls/raises-has the pot after the hero has bet
-#handle ',' in bet amounts
+#handle ',' in bet amounts.
 import re
 from dataclasses import dataclass
 @dataclass
