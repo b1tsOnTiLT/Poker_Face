@@ -17,6 +17,7 @@ class Parser:
         river_bet = None
         blind = None
         lines=open(fn, 'r', errors='replace').readlines()
+        Comm_cards={}
 
         def __post_init__(self):
              
@@ -39,7 +40,20 @@ class Parser:
                     self.Hands=self.Hands.groups()
                     self.Round_folded = 'PREFLOP'
                     self.pot = int(self.Big_Blind) + int(self.Small_Blind)
-                   
+
+            for line in self.lines:
+                    p=r'^\*+\W+FLOP'
+                    q=r'([2-9AKQJdhsc]{2,3})'
+                    if re.match(p,line):
+                        self.Comm_cards['FLOP']=tuple(re.findall(q,line))
+                    p=r'^\*+\W*TURN'
+                    if re.match(p,line):
+                        self.Comm_cards['TURN']=tuple(re.findall(q,line))
+                    p=r'^\*+\W*RIVER'
+                    if re.match(p,line):
+                        self.Comm_cards['RIVER']=tuple(re.findall(q,line))
+           
+
 
         def betlog(self, street):
              betdic = {}
@@ -97,7 +111,9 @@ class Parser:
             self.river_bet = self.betlog('RIVER')
             return self.river_bet
            
-            
+           
+
+           
 
 
 
