@@ -2,6 +2,7 @@ import eval7,pprint
 import random 
 from parser import Parser
 from dataclasses import dataclass
+#remove generator
 
 
 
@@ -11,83 +12,84 @@ from dataclasses import dataclass
 
 @dataclass
 class Poteq():
-    villains=3
-    """flop=list(Parser().Comm_cards.get('FLOP',None))
-    turn=list(Parser().Comm_cards.get('TURN',None))
-    river=list(Parser().Comm_cards.get('RIVER',None))
+    villains=None
+    flop=list(Parser().Comm_cards.get('FLOP',[]))
+    turn=list(Parser().Comm_cards.get('TURN',[]))
+    river=list(Parser().Comm_cards.get('RIVER',[]))
+    if(turn==[]):
+          curr_board=flop
+    elif(river==[]):
+          curr_boar=turn
+    elif(river!=[]):
+          curr_board=river
+    
+    
+          
 
     Hero_Hand=list(Parser().Hands)
-    """
-    flop=[]
-    turn=[]
-    river=[]
+    
+    
     Hero_Hand=['As','Ad']
-    current_hands=Hero_Hand+flop+turn+river
-    board=[eval7.Cards(s) for s in flop+turn+river]
-    itr=1000
+    Hero_Handr=[]
+    for s in Hero_Hand:
+          Hero_Handr.append(eval7.Card(s))
+          
+    board=[]
+    current_hands=Hero_Hand+curr_board
+    for s in curr_board:
+        if s is None:
+               break
+        board.append(eval7.Card(s))
+    itr=10000
 
 
 
     def poteq(self):
         
-        curr_cards=len(self.current_hands)-2
-        deck=eval7.Deck()
-        deck.cards.remove(eval7.Card(s) for s in self.current_hands)
+        curr_cards=len(self.board)
         win=0
         tie=[]
+        board=self.board.copy()
+        
         
         
         for i in range(self.itr):
-           villian_scores=[]
-           villian_hand=[]
-           deck.shuffle()
-           for i in range(self.villains):
-                villian_hand.append(deck.deal(2))
-           self.board+=deck.deal(5-curr_cards)
-           for i in range(self.villains):
-                
-                villian_scores.append(eval7.evaluate([j for j in villian_hand]+self.board))
-           Hero_score=eval7.evaluate(eval7.Card(self.Hero_Hand)+self.board)
-           if Hero_score>max(villian_scores):
-                win+=1
-           elif Hero_score==max(villian_scores):
-                t=0
-                for i in villian_scores:
-                    if i==Hero_score:
-                        t+=1
-                tie.append(t)
-        final_score=win+ [1/t for t in tie]
-        print(final_score/self.itr*100)
-        
-        
-
-            
+            deck=eval7.Deck()
+            for card in self.current_hands:
+                deck.cards.remove(eval7.Card(card))
+            board=self.board.copy()
             
 
+            
+            villian_scores=[]
+            villian_hand=[]
+            deck.shuffle()
+            for i in range(self.villains):
+                    villian_hand.append(deck.deal(2))
+            board+=deck.deal(5-curr_cards)
+            for i in range(self.villains):
+                    
+                villian_board=board+villian_hand[i]
+                villian_scores.append(eval7.evaluate(villian_board))
+            Hero_score=eval7.evaluate(self.Hero_Handr+board)
+            if Hero_score>max(villian_scores):
+                        win+=1
+            elif Hero_score==max(villian_scores):
+                        t=0
+                        for i in villian_scores:
+                            if i==Hero_score:
+                                t+=1
+                        tie.append(t)
+        final_score=win
+        for t in tie:
+                final_score+=1/t
+        print(final_score*100/self.itr)
+           
+        
+
+new=Poteq()
+new.poteq()
 
 
-                
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            
     
-
-
-
-
-
-
-
