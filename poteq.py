@@ -1,3 +1,4 @@
+#Note: poteq is caluclated at each bet indiviudally-this class needs to take the betdic as input.
 import eval7,pprint
 import random 
 from parser import Parser
@@ -7,40 +8,25 @@ from dataclasses import dataclass
 
 
 #eval7.evaluate(hand)  Deck-deal(),shuffle()  eval7.Card('As') eval7.handtype(score), Deck-remove()
-#assuming number of active players right now is fixed at 3.
 
 
-@dataclass
+
 class Poteq():
-    villains=None
-    flop=list(Parser().Comm_cards.get('FLOP',[]))
-    turn=list(Parser().Comm_cards.get('TURN',[]))
-    river=list(Parser().Comm_cards.get('RIVER',[]))
-    if(turn==[]):
-          curr_board=flop
-    elif(river==[]):
-          curr_boar=turn
-    elif(river!=[]):
-          curr_board=river
     
-    
-          
-
-    Hero_Hand=list(Parser().Hands)
-    
-    
-    Hero_Hand=['As','Ad']
-    Hero_Handr=[]
-    for s in Hero_Hand:
-          Hero_Handr.append(eval7.Card(s))
-          
-    board=[]
-    current_hands=Hero_Hand+curr_board
-    for s in curr_board:
-        if s is None:
-               break
-        board.append(eval7.Card(s))
-    itr=10000
+    def __init__(self,villains,board_rn):
+        self.active_villains=villains
+        self.curr_board=board_rn
+        self.Hero_Hand=list(Parser().Hands)
+        self.Hero_Handr=[]
+        for s in self.Hero_Hand:
+            self.Hero_Handr.append(eval7.Card(s))    
+        self.board=[]
+        self.current_hands=self.Hero_Hand+self.curr_board
+        for s in self.curr_board:
+            if s is None:
+                break
+            self.board.append(eval7.Card(s))
+        self.itr=10000
 
 
 
@@ -64,7 +50,7 @@ class Poteq():
             villian_scores=[]
             villian_hand=[]
             deck.shuffle()
-            for i in range(self.villains):
+            for i in range(self.active_villains):
                     villian_hand.append(deck.deal(2))
             board+=deck.deal(5-curr_cards)
             for i in range(self.villains):
@@ -87,8 +73,7 @@ class Poteq():
            
         
 
-new=Poteq()
-new.poteq()
+
 
 
             

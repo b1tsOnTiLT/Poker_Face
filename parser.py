@@ -1,7 +1,10 @@
 #The betdic{} for cases where hero bets/calls/raises-has the pot after the hero has bet
-#handle ',' in bet amounts.
+#handle ',' in bet amounts
+#def __init__(self,linest:int,plyr_list:list,last_line:int):
+#return self.pl,self.endline
 import re
 from dataclasses import dataclass
+from numheroes import Villain
 @dataclass
 class Parser:
         fn='new1.txt'
@@ -18,6 +21,8 @@ class Parser:
         blind = None
         lines=open(fn, 'r', errors='replace').readlines()
         Comm_cards={}
+        start_line=None
+        player_list=[]
 
         def __post_init__(self):
              
@@ -28,7 +33,7 @@ class Parser:
                 blind=r'₹(\d+)'
                 blinds=re.findall(blind,line)
                 self.Small_Blind,self.Big_Blind=blinds
-                print(self.Small_Blind,self.Big_Blind)
+                
          
             for line in self.lines:
                     p='Dealt'
@@ -52,8 +57,22 @@ class Parser:
                     p=r'^\*+\W*RIVER'
                     if re.match(p,line):
                         self.Comm_cards['RIVER']=tuple(re.findall(q,line))
+            for line in self.lines:
+                    if line.startswith('*'):
+                        break
+                    elif line.startswith('Seat'):
+                        p=r'\:\W+(.+)\W+\('
+                        name=re.findall(p,line)[0].strip()
+                        self.player_list.append(name)
+            
+        
+        def num_villians(self,curr_ind):
            
-
+            if self.start_line is None:
+               self.player_list, self.start_line = Villain(0, self.player_list, curr_ind).num_villains()
+            else:
+                self.player_list, self.start_line = Villain(self.start_line, self.player_list, curr_ind).num_villains()
+                
 
         def betlog(self, street):
              betdic = {}
@@ -64,8 +83,9 @@ class Parser:
                    if not re.match(p,line):
                          continue
                    elif re.match(p,line):
-                         for subline in self.lines[idx+1:]:
+                         for ind,subline in enumerate(self.lines[idx+1:],start=idx+1):
                             if re.match('^\*+',subline):
+                                
                                 break
                             
                             elif 'calls' in subline:
@@ -73,18 +93,21 @@ class Parser:
                                         
                                 if self.Player_name in subline:
                                     i += 1
-                                    betdic[f"call{i}"] = [float(re.findall(q,subline)[0]), int(self.pot)]
+                                    self.num_villians(ind)
+                                    betdic[f"call{i}"] = [float(re.findall(q,subline)[0]), int(self.pot), len(self.player_list)]
                             elif 'bets' in subline:
                                 self.pot += float(re.findall(q,subline)[0])
                                 if self.Player_name in subline:
                                     i += 1
-                                    betdic[f"bet{i}"] = [float(re.findall(q,subline)[0]), int(self.pot)]
+                                    self.num_villians(ind)
+                                    betdic[f"bet{i}"] = [float(re.findall(q,subline)[0]), int(self.pot),len(self.player_list)]
                             elif 'raises' in subline:   
                                     
                                 self.pot += float(re.findall(r'to\W+₹\W*(\d+)',subline)[0])
                                 if self.Player_name in subline:
                                     i += 1
-                                    betdic[f"raise{i}"] = [float(re.findall(r'to\W+₹\W*(\d+)',subline)[0]), int(self.pot)]
+                                    self.num_villians(ind)
+                                    betdic[f"raise{i}"] = [float(re.findall(r'to\W+₹\W*(\d+)',subline)[0]), int(self.pot),len(self.player_list)]
                                         
                             elif 'folds' in subline and self.Player_name in subline:
                                 self.Round_folded = street
@@ -113,7 +136,11 @@ class Parser:
            
            
 
-           
-
-
+if __name__ == "__main__":
+    new=Parser()
+    print(new.PREFLOP())
+    print(new.FLOP())
+    print(new.TURN())
+    print(new.RIVER())
+    print("This is considering the worst case scenario(most callers),Bet List is:[Bet,Pot if Bet, Villains]-for each street,each bet ")
 
