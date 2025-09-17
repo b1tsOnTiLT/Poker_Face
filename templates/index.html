@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poker Hand Analyzer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .hand-card {
+            margin-bottom: 20px;
+            border: 1px solid #e3e6f0;
+            border-left: 4px solid #4e73df;
+            background-color: white;
+            box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+        }
+        .street-section {
+            margin-bottom: 15px;
+            padding: 15px;
+            background-color: #f8f9fc;
+            border-radius: 8px;
+            border: 1px solid #e3e6f0;
+        }
+        .action-item {
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 6px;
+            background-color: white;
+            border: 1px solid #e3e6f0;
+        }
+        .justified {
+            border-left: 4px solid #4e73df;
+            background-color: #f8f9fc;
+        }
+        .not-justified {
+            border-left: 4px solid #858796;
+            background-color: #f8f9fc;
+        }
+        .upload-area {
+            border: 2px dashed #4e73df;
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            background-color: white;
+            transition: all 0.3s ease;
+        }
+        .upload-area:hover {
+            background-color: #f8f9fc;
+            border-color: #2e59d9;
+        }
+        .upload-area.dragover {
+            background-color: #f8f9fc;
+            border-color: #2e59d9;
+        }
+        .loading {
+            display: none;
+        }
+        .results {
+            display: none;
+        }
+        .card-header {
+            background-color: #4e73df;
+            color: white;
+            border-bottom: none;
+        }
+        .text-primary {
+            color: #4e73df !important;
+        }
+        .btn-primary {
+            background-color: #4e73df;
+            border-color: #4e73df;
+        }
+        .btn-primary:hover {
+            background-color: #2e59d9;
+            border-color: #2e59d9;
+        }
+        .pot-stats {
+            font-weight: bold;
+            color: #5a5c69;
+        }
+        h1 {
+            color: #5a5c69;
+        }
+        .text-muted {
+            color: #858796 !important;
+        }
+        .hero-cards {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #4e73df;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center mb-4">
+                    <i class="fas fa-poker-chips text-primary"></i>
+                    Poker Hand Analyzer
+                </h1>
+                <p class="text-center text-muted mb-4">
+                    Upload your poker hand history file to analyze pot equity vs pot odds
+                </p>
+            </div>
+        </div>
+
+        <!-- Upload Section -->
+        <div class="row mb-4">
+            <div class="col-md-8 mx-auto">
+                <div class="upload-area" id="uploadArea">
+                    <i class="fas fa-cloud-upload-alt fa-3x text-primary mb-3"></i>
+                    <h4>Upload Poker Hand File</h4>
+                    <p class="text-muted">Drag and drop your file here or click to browse</p>
+                    <input type="file" id="fileInput" class="d-none" accept=".txt">
+                    <button class="btn btn-primary" onclick="document.getElementById('fileInput').click()">
+                        <i class="fas fa-folder-open"></i> Choose File
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading Section -->
+        <div class="loading text-center" id="loadingSection">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <p class="mt-2">Analyzing hands...</p>
+        </div>
+
+        <!-- Results Section -->
+        <div class="results" id="resultsSection">
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="handSelect" class="form-label">Select Hand:</label>
+                    <select class="form-select" id="handSelect">
+                        <option value="">Choose a hand...</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="handDetails"></div>
+        </div>
+
+        <!-- Error Section -->
+        <div class="alert alert-danger d-none" id="errorSection" role="alert">
+            <i class="fas fa-exclamation-triangle"></i>
+            <span id="errorMessage"></span>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const uploadArea = document.getElementById('uploadArea');
+        const fileInput = document.getElementById('fileInput');
+        const loadingSection = document.getElementById('loadingSection');
+        const resultsSection = document.getElementById('resultsSection');
+        const errorSection = document.getElementById('errorSection');
+        const handSelect = document.getElementById('handSelect');
+        const handDetails = document.getElementById('handDetails');
+
+        // Drag and drop functionality
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadArea.classList.add('dragover');
+        });
+
+        uploadArea.addEventListener('dragleave', () => {
+            uploadArea.classList.remove('dragover');
+        });
+
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                handleFile(files[0]);
+            }
+        });
+
+        fileInput.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+                handleFile(e.target.files[0]);
+            }
+        });
+
+        function handleFile(file) {
+            if (!file.name.endsWith('.txt')) {
+                showError('Please upload a .txt file');
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('file', file);
+
+            showLoading();
+            hideError();
+            hideResults();
+
+            fetch('/upload', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                hideLoading();
+                if (data.error) {
+                    showError(data.error);
+                } else {
+                    showResults(data.hands);
+                }
+            })
+            .catch(error => {
+                hideLoading();
+                showError('Error uploading file: ' + error.message);
+            });
+        }
+
+        function showLoading() {
+            loadingSection.style.display = 'block';
+        }
+
+        function hideLoading() {
+            loadingSection.style.display = 'none';
+        }
+
+        function showResults(hands) {
+            resultsSection.style.display = 'block';
+            
+            // Populate hand dropdown
+            handSelect.innerHTML = '<option value="">Choose a hand...</option>';
+            hands.forEach((hand, index) => {
+                const option = document.createElement('option');
+                option.value = index;
+                option.textContent = `Hand ${hand.hand_number}`;
+                handSelect.appendChild(option);
+            });
+
+            // Show first hand by default
+            if (hands.length > 0) {
+                displayHand(hands[0]);
+            }
+
+            // Handle hand selection change
+            handSelect.addEventListener('change', (e) => {
+                const selectedIndex = e.target.value;
+                if (selectedIndex !== '') {
+                    displayHand(hands[selectedIndex]);
+                }
+            });
+        }
+
+        function displayHand(hand) {
+            const streets = ['preflop', 'flop', 'turn', 'river'];
+            let html = `<div class="card hand-card">
+                <div class="card-header">
+                    <h5 class="mb-0"><i class="fas fa-hand-paper"></i> Hand ${hand.hand_number}</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <h6 class="text-primary">Your Cards:</h6>
+                            <div class="hero-cards">
+                                ${hand.hero_cards ? hand.hero_cards.join(' ') : 'No cards found'}
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="streetSelect" class="form-label">Select Street:</label>
+                            <select class="form-select" id="streetSelect">
+                                <option value="">Choose a street...</option>`;
+
+            streets.forEach(street => {
+                if (hand[street] && hand[street].length > 0) {
+                    html += `<option value="${street}">${street.toUpperCase()}</option>`;
+                }
+            });
+
+            html += `</select>
+                        </div>
+                    </div>
+                    <div id="streetDetails"></div>
+                </div>
+            </div>`;
+            
+            handDetails.innerHTML = html;
+
+            // Handle street selection
+            document.getElementById('streetSelect').addEventListener('change', (e) => {
+                const selectedStreet = e.target.value;
+                if (selectedStreet && hand[selectedStreet]) {
+                    displayStreet(hand[selectedStreet], selectedStreet);
+                } else {
+                    document.getElementById('streetDetails').innerHTML = '';
+                }
+            });
+        }
+
+        function displayStreet(streetData, streetName) {
+            let html = `<div class="street-section">
+                <h6 class="text-capitalize text-primary">${streetName.toUpperCase()}</h6>`;
+            
+            if (streetData.length > 0) {
+                if (streetData[0].street_cards && streetData[0].street_cards.length > 0) {
+                    html += `<div class="mb-2">
+                        <strong>Community Cards:</strong> ${streetData[0].street_cards.join(' ')}
+                    </div>`;
+                }
+                if (streetData[0].num_villains > 0) {
+                    const opponents = streetData[0].num_villains - 1;
+                    html += `<div class="mb-2">
+                        <strong>Active Players:</strong> ${streetData[0].num_villains} total (${opponents} opponent${opponents !== 1 ? 's' : ''})
+                    </div>`;
+                }
+            }
+            
+            streetData.forEach(action => {
+                html += `<div class="action-item ${action.color === 'success' ? 'justified' : 'not-justified'}">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <strong>${action.action_display}</strong>
+                        </div>
+                        <div class="col-md-2">
+                            <span class="pot-stats">${action.action_detail}</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span class="pot-stats">Pot: ₹${action.pot_after}</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span class="pot-stats">Equity: ${action.pot_equity}%</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span class="pot-stats">Odds: ${action.pot_odds}%</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span>${action.justification}</span>
+                        </div>
+                    </div>
+                </div>`;
+            });
+            
+            html += `</div>`;
+            document.getElementById('streetDetails').innerHTML = html;
+        }
+
+        function hideResults() {
+            resultsSection.style.display = 'none';
+        }
+
+        function showError(message) {
+            document.getElementById('errorMessage').textContent = message;
+            errorSection.classList.remove('d-none');
+        }
+
+        function hideError() {
+            errorSection.classList.add('d-none');
+        }
+    </script>
+</body>
+</html>
