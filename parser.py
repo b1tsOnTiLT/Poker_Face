@@ -3,7 +3,6 @@
 #def __init__(self,linest:int,plyr_list:list,last_line:int):
 #return self.pl,self.endline
 import re
-from dataclasses import dataclass
 from numheroes import Villain
 
 class Parser:
