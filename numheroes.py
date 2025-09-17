@@ -1,11 +1,9 @@
 import re#line:the current hero bet/call line, last_line-where num heroes was checked till last time
 class Villain():
     
-    def __init__(self,linest:int,plyr_list:list,last_line:int):
+    def __init__(self,linest:int,plyr_list:list,last_line:int,curr_inlines):
         self.pl = plyr_list
-        fn='new1.txt'
-        fh=open(fn,'r')
-        self.lines=fh.readlines()
+        self.lines=curr_inlines
         self.stline=linest
         self.endline=last_line
         

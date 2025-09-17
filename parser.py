@@ -5,27 +5,26 @@
 import re
 from dataclasses import dataclass
 from numheroes import Villain
-@dataclass
-class Parser:
-        fn='new1.txt'
-        Small_Blind = None
-        Big_Blind = None
-        Player_name = None
-        Hands = None
-        Round_folded = None
-        pot = 0.0
-        preflop_bet = None
-        flop_bet = None
-        turn_bet = None
-        river_bet = None
-        blind = None
-        lines=open(fn, 'r', errors='replace').readlines()
-        Comm_cards={}
-        start_line=None
-        player_list=[]
 
-        def __post_init__(self):
-             
+class Parser:
+        
+        def __init__(self,Hand_Blob):
+            self.Small_Blind = None
+            self.Big_Blind = None
+            self.Player_name = None
+            self.Hands = None
+            self.Round_folded = None
+            self.pot = 0.0
+            self.preflop_bet = None
+            self.flop_bet = None
+            self.turn_bet = None
+            self.river_bet = None
+            self.blind = None
+            self.lines=Hand_Blob
+            self.Comm_cards={}
+            self.start_line=None
+            self.player_list=[]
+                
             for line in self.lines:
                 p='^PokerStars Hand'
                 if not re.match(p,line):
@@ -69,16 +68,16 @@ class Parser:
         def num_villians(self,curr_ind):
            
             if self.start_line is None:
-               self.player_list, self.start_line = Villain(0, self.player_list, curr_ind).num_villains()
+               self.player_list, self.start_line = Villain(0, self.player_list, curr_ind,self.lines).num_villains()
             else:
-                self.player_list, self.start_line = Villain(self.start_line, self.player_list, curr_ind).num_villains()
+                self.player_list, self.start_line = Villain(self.start_line, self.player_list, curr_ind,self.lines).num_villains()
                 
 
         def betlog(self, street):
              betdic = {}
              i=0
              p=rf'^\*+\W+{street}'
-             q=r'₹(\d+)'
+             q=r'₹(\d+\.?\d*)'
              for idx,line in enumerate(self.lines):
                    if not re.match(p,line):
                          continue
@@ -103,11 +102,11 @@ class Parser:
                                     betdic[f"bet{i}"] = [float(re.findall(q,subline)[0]), int(self.pot),len(self.player_list)]
                             elif 'raises' in subline:   
                                     
-                                self.pot += float(re.findall(r'to\W+₹\W*(\d+)',subline)[0])
+                                self.pot += float(re.findall(r'to\W+₹\W*(\d+\.?\d*)',subline)[0])
                                 if self.Player_name in subline:
                                     i += 1
                                     self.num_villians(ind)
-                                    betdic[f"raise{i}"] = [float(re.findall(r'to\W+₹\W*(\d+)',subline)[0]), int(self.pot),len(self.player_list)]
+                                    betdic[f"raise{i}"] = [float(re.findall(r'raises\W+₹\W*(\d+\.?\d*)',subline)[0]),float(re.findall(r'to\W+₹\W*(\d+\.?\d*)',subline)[0]), int(self.pot),len(self.player_list)]
                                         
                             elif 'folds' in subline and self.Player_name in subline:
                                 self.Round_folded = street
