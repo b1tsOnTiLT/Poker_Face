@@ -3,7 +3,7 @@ This was something I was working on for myself, but after I lost a lot of money 
 (Please dont take this seriously, its a joke-obviously, Poker is'nt Gambling :)
 
 [Access it here](https://pokerbizz.onrender.com/)  
-Currently it works only with PokerStars -I've added a sample file in the repo.[hands.txt].It doesn't have streaming/multithreading so uploading large files with more hands might  
+Currently it works only with PokerStars -I've added a sample hand history file in the repo (hands.txt). It doesn't have streaming/multithreading so uploading large files with more hands might  
  take upto 2 minutes
 ## What It is
 
