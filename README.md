@@ -12,7 +12,7 @@ What it will do is show you the pot odds and pot equity for each of your calls/b
 
 It has python backend with a Flask framework and HTML frontend
 
-[![Heres how it works](sample.png)]
+![Heres how it works](sample.png)
 
 I've used a monte carlo sim that runs your hand against the largest amount of possible callers and the current board - 10,000 times. 
 Your total score is(Pot equity):
