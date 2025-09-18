@@ -1,4 +1,4 @@
-This was something I was working on for myself, but after I lost a lot of money I thought of quitting open sourcing so someone might benefit and Gamble better.  
+This was something I was working on for myself, but after I lost a lot of money I thought of quitting and  open sourcing so someone might benefit and Gamble better.  
 
 (Please dont take this seriously, its a joke-obviously, Poker is'nt Gambling :)
 
