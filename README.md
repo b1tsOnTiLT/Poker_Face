@@ -15,7 +15,7 @@ It has python backend with a Flask framework and HTML frontend
 
 ![Heres how it works](sample.png)
 
-I've used a monte carlo sim that runs your hand against the largest amount of possible callers and the current board - 10,000 times. With varying number of villians your poition is accounted for in equity
+I've used a monte carlo sim that runs your hand against the largest amount of possible callers and the current board - 10,000 times. With varying number of villians your poition is accounted for in pot equity  
 Your total score is(Pot equity):
 ```math
 
