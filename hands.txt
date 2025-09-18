@@ -1,0 +1,757 @@
+*********** # 1 **************
+PokerStars Hand #235511436: Hold'em No Limit (₹5/₹10 INR) - 2025/08/15 14:10:31 IST
+Table '4703573' 6-max Seat #4 is the button
+Seat 1: biswahari (₹583.33 in chips)
+Seat 2: hdking2735 (₹874.37 in chips)
+Seat 3: IronLivier809 (₹277.1 in chips)
+Seat 4: arnis39461 (₹957.34 in chips)
+Seat 6: bhumee143 (₹412.96 in chips)
+bhumee143: posts small blind ₹5
+biswahari: posts big blind ₹10
+*** HOLE CARDS ***
+Dealt to IronLivier809 [9s 8d]
+hdking2735: calls ₹10
+IronLivier809: calls ₹10
+arnis39461: calls ₹10
+bhumee143: folds
+biswahari: checks
+*** FLOP *** [Jh 8h 3c]
+biswahari: checks
+hdking2735: checks
+IronLivier809: checks
+arnis39461: checks
+*** TURN *** [Jh 8h 3c] [6h]
+biswahari: checks
+hdking2735: checks
+IronLivier809: bets ₹40
+arnis39461: calls ₹40
+biswahari: folds
+hdking2735: folds
+*** RIVER *** [Jh 8h 3c 6h] [Qd]
+IronLivier809: bets ₹60
+arnis39461: raises ₹180 to ₹240
+IronLivier809: calls ₹167.1 and is all-in
+Uncalled bet (₹12.9) returned to arnis39461
+*** SHOW DOWN ***
+IronLivier809: shows [9s 8d] (a pair of Eights)
+arnis39461: shows [Ah 2h] (a flush, Ace high)
+arnis39461 collected ₹579.2 from pot
+*** SUMMARY ***
+Total pot ₹592.1 Main pot ₹579.2. Side pot 12.9. | Rake ₹34.17
+Board  [Jh 8h 3c 6h Qd]
+Seat 1: biswahari (big blind) folded on the Turn (didn't bet)
+Seat 2: hdking2735 folded on the Turn
+Seat 3: IronLivier809 showed [9s 8d] and lost with a a pair of Eights
+Seat 4: arnis39461 (button) showed [Ah 2h] and won (₹536.99) with a a flush, Ace high
+Seat 6: bhumee143 (small blind) folded before Flop (didn't bet)
+
+
+*********** # 2 **************
+PokerStars Hand #235511289: Hold'em No Limit (₹5/₹10 INR) - 2025/08/15 14:09:46 IST
+Table '4703573' 6-max Seat #3 is the button
+Seat 1: biswahari (₹593.33 in chips)
+Seat 2: hdking2735 (₹1089.55 in chips)
+Seat 3: IronLivier809 (₹277.1 in chips)
+Seat 4: arnis39461 (₹962.34 in chips)
+Seat 6: bhumee143 (₹215.18 in chips)
+arnis39461: posts small blind ₹5
+bhumee143: posts big blind ₹10
+*** HOLE CARDS ***
+Dealt to IronLivier809 [9d 3s]
+biswahari: calls ₹10
+hdking2735: raises ₹30 to ₹40
+IronLivier809: folds
+arnis39461: folds
+bhumee143: raises ₹80 to ₹120
+biswahari: folds
+hdking2735: raises ₹360 to ₹480
+bhumee143: calls ₹95.18 and is all-in
+*** FLOP *** [6s 5h 2c]
+*** TURN *** [6s 5h 2c] [Ac]
+*** RIVER *** [6s 5h 2c Ac] [3c]
+Uncalled bet (₹264.82) returned to hdking2735
+*** SHOW DOWN ***
+hdking2735: shows [Qd Qs] (a pair of Queens)
+bhumee143: shows [Kh Kd] (a pair of Kings)
+bhumee143 collected ₹445.36 from pot
+*** SUMMARY ***
+Total pot ₹710.18 Main pot ₹445.36. Side pot 264.82. | Rake ₹26.28
+Board  [6s 5h 2c Ac 3c]
+Seat 1: biswahari folded before Flop
+Seat 2: hdking2735 showed [Qd Qs] and lost with a a pair of Queens
+Seat 3: IronLivier809 (button) folded before Flop (didn't bet)
+Seat 4: arnis39461 (small blind) folded before Flop (didn't bet)
+Seat 6: bhumee143 (big blind) showed [Kh Kd] and won (₹412.96) with a a pair of Kings
+
+
+*********** # 3 **************
+PokerStars Hand #235511192: Hold'em No Limit (₹5/₹10 INR) - 2025/08/15 14:09:15 IST
+Table '4703573' 6-max Seat #2 is the button
+Seat 1: biswahari (₹618.33 in chips)
+Seat 2: hdking2735 (₹1089.55 in chips)
+Seat 3: IronLivier809 (₹287.1 in chips)
+Seat 4: arnis39461 (₹931.82 in chips)
+Seat 6: bhumee143 (₹215.18 in chips)
+IronLivier809: posts small blind ₹5
+arnis39461: posts big blind ₹10
+*** HOLE CARDS ***
+Dealt to IronLivier809 [Td 5c]
+bhumee143: folds
+biswahari: calls ₹10
+hdking2735: folds
+IronLivier809: calls ₹5
+arnis39461: checks
+*** FLOP *** [Jc 7d 3d]
+IronLivier809: checks
+arnis39461: checks
+biswahari: checks
+*** TURN *** [Jc 7d 3d] [9c]
+IronLivier809: checks
+arnis39461: checks
+biswahari: bets ₹15
+IronLivier809: folds
+arnis39461: raises ₹45 to ₹60
+biswahari: folds
+Uncalled bet (₹45) returned to arnis39461
+arnis39461 collected ₹59.06 from pot
+*** SUMMARY ***
+Total pot ₹105 | Rake ₹3.54
+Board  [Jc 7d 3d 9c]
+Seat 1: biswahari folded on the Turn
+Seat 2: hdking2735 (button) folded before Flop (didn't bet)
+Seat 3: IronLivier809 (small blind) folded on the Turn
+Seat 4: arnis39461 (big blind) showed [Th 8d] and won (₹55.52) 
+Seat 6: bhumee143 folded before Flop (didn't bet)
+
+
+*********** # 4 **************
+PokerStars Hand #235511116: Hold'em No Limit (₹5/₹10 INR) - 2025/08/15 14:08:52 IST
+Table '4703573' 6-max Seat #1 is the button
+Seat 1: biswahari (₹618.33 in chips)
+Seat 2: hdking2735 (₹1090.14 in chips)
+Seat 3: IronLivier809 (₹287.69 in chips)
+Seat 4: arnis39461 (₹931.82 in chips)
+Seat 6: bhumee143 (₹215.18 in chips)
+hdking2735: posts small blind ₹5
+IronLivier809: posts big blind ₹10
+*** HOLE CARDS ***
+Dealt to IronLivier809 [Jd 2d]
+arnis39461: folds
+bhumee143: folds
+biswahari: folds
+hdking2735: calls ₹5
+IronLivier809: checks
+*** FLOP *** [4c Qs Ts]
+hdking2735: checks
+IronLivier809: checks
+*** TURN *** [4c Qs Ts] [6s]
+hdking2735: checks
+IronLivier809: checks
+*** RIVER *** [4c Qs Ts 6s] [Ks]
+hdking2735: checks
+IronLivier809: checks
+*** SHOW DOWN ***
+hdking2735: shows [Jh 5h] (high card King)
+IronLivier809: shows [Jd 2d] (high card King)
+hdking2735 collected ₹10 from pot
+IronLivier809 collected ₹10 from pot
+*** SUMMARY ***
+Total pot ₹20 | Rake ₹1.18
+Board  [4c Qs Ts 6s Ks]
+Seat 1: biswahari (button) folded before Flop (didn't bet)
+Seat 2: hdking2735 (small blind) showed [Jh 5h] and won (₹9.41) with a high card King
+Seat 3: IronLivier809 (big blind) showed [Jd 2d] and won (₹9.41) with a high card King
+Seat 4: arnis39461 folded before Flop (didn't bet)
+Seat 6: bhumee143 folded before Flop (didn't bet)
+
+
+*********** # 5 **************
+PokerStars Hand #235511047: Hold'em No Limit (₹5/₹10 INR) - 2025/08/15 14:08:34 IST
+Table '4703573' 6-max Seat #6 is the button
+Seat 1: biswahari (₹623.33 in chips)
+Seat 2: hdking2735 (₹1075.59 in chips)
+Seat 3: IronLivier809 (₹287.69 in chips)
+Seat 4: arnis39461 (₹931.82 in chips)
+Seat 6: bhumee143 (₹225.18 in chips)
+biswahari: posts small blind ₹5
+hdking2735: posts big blind ₹10
+*** HOLE CARDS ***
+Dealt to IronLivier809 [7d 8s]
+IronLivier809: folds
+arnis39461: folds
+bhumee143: calls ₹10
+biswahari: folds
+hdking2735: raises ₹40 to ₹50
+bhumee143: folds
+Uncalled bet (₹40) returned to hdking2735
+hdking2735 collected ₹24.55 from pot
+*** SUMMARY ***
+Total pot ₹65 | Rake ₹0
+Seat 1: biswahari (small blind) folded before Flop (didn't bet)
+Seat 2: hdking2735 (big blind) showed [Ac As] and won (₹24.55) 
+Seat 3: IronLivier809 folded before Flop (didn't bet)
+Seat 4: arnis39461 folded before Flop (didn't bet)
+Seat 6: bhumee143 (button) folded before Flop
+
+
+*********** # 6 **************
+PokerStars Hand #235510955: Hold'em No Limit (₹5/₹10 INR) - 2025/08/15 14:08:07 IST
+Table '4703573' 6-max Seat #4 is the button
+Seat 1: biswahari (₹633.33 in chips)
+Seat 2: hdking2735 (₹1085.59 in chips)
+Seat 3: IronLivier809 (₹297.69 in chips)
+Seat 4: arnis39461 (₹897.87 in chips)
+Seat 6: bhumee143 (₹230.18 in chips)
+bhumee143: posts small blind ₹5
+biswahari: posts big blind ₹10
+*** HOLE CARDS ***
+Dealt to IronLivier809 [3c Ac]
+hdking2735: calls ₹10
+IronLivier809: calls ₹10
+arnis39461: raises ₹40 to ₹50
+bhumee143: folds
+biswahari: folds
+hdking2735: folds
+IronLivier809: folds
+Uncalled bet (₹40) returned to arnis39461
+arnis39461 collected ₹43.95 from pot
+*** SUMMARY ***
+Total pot ₹85 | Rake ₹0
+Seat 1: biswahari (big blind) folded before Flop (didn't bet)
+Seat 2: hdking2735 folded before Flop
+Seat 3: IronLivier809 folded before Flop
+Seat 4: arnis39461 (button) showed [Tc Th] and won (₹43.95) 
+Seat 6: bhumee143 (small blind) folded before Flop (didn't bet)
+
+
+*********** # 7 **************
+PokerStars Hand #235510624: Hold'em No Limit (₹5/₹10 INR) - 2025/08/15 14:06:24 IST
+Table '4703573' 6-max Seat #6 is the button
+Seat 2: hdking2735 (₹1095.59 in chips)
+Seat 3: IronLivier809 (₹347.69 in chips)
+Seat 4: arnis39461 (₹841.84 in chips)
+Seat 6: bhumee143 (₹126.67 in chips)
+hdking2735: posts small blind ₹5
+IronLivier809: posts big blind ₹10
+*** HOLE CARDS ***
+Dealt to IronLivier809 [5c Td]
+arnis39461: calls ₹10
+bhumee143: calls ₹10
+hdking2735: calls ₹5
+IronLivier809: checks
+*** FLOP *** [Jd 8d 4d]
+hdking2735: checks
+IronLivier809: checks
+arnis39461: bets ₹40
+bhumee143: folds
+hdking2735: folds
+IronLivier809: calls ₹40
+*** TURN *** [Jd 8d 4d] [9c]
+IronLivier809: checks
+arnis39461: bets ₹120
+IronLivier809: folds
+Uncalled bet (₹120) returned to arnis39461
+arnis39461 collected ₹118.11 from pot
+*** SUMMARY ***
+Total pot ₹240 | Rake ₹7.08
+Board  [Jd 8d 4d 9c]
+Seat 2: hdking2735 (small blind) folded on the Flop
+Seat 3: IronLivier809 (big blind) folded on the Turn
+Seat 4: arnis39461 showed [5h Qh] and won (₹111.03) 
+Seat 6: bhumee143 (button) folded on the Flop
+
+
+*********** # 8 **************
+PokerStars Hand #235510393: Hold'em No Limit (₹5/₹10 INR) - 2025/08/15 14:05:20 IST
+Table '4703573' 6-max Seat #4 is the button
+Seat 2: hdking2735 (₹1095.59 in chips)
+Seat 3: IronLivier809 (₹357.69 in chips)
+Seat 4: arnis39461 (₹841.84 in chips)
+Seat 5: hanumanhram (₹102.19 in chips)
+Seat 6: bhumee143 (₹113.56 in chips)
+hanumanhram: posts small blind ₹5
+bhumee143: posts big blind ₹10
+*** HOLE CARDS ***
+Dealt to IronLivier809 [Ad 7h]
+hdking2735: folds
+IronLivier809: calls ₹10
+arnis39461: folds
+hanumanhram: folds
+bhumee143: checks
+*** FLOP *** [3c 6c 2s]
+bhumee143: bets ₹25
+IronLivier809: folds
+Uncalled bet (₹25) returned to bhumee143
+bhumee143 collected ₹24.59 from pot
+*** SUMMARY ***
+Total pot ₹50 | Rake ₹1.48
+Board  [3c 6c 2s]
+Seat 2: hdking2735 folded before Flop (didn't bet)
+Seat 3: IronLivier809 folded on the Flop
+Seat 4: arnis39461 (button) folded before Flop (didn't bet)
+Seat 5: hanumanhram (small blind) folded before Flop (didn't bet)
+Seat 6: bhumee143 (big blind) showed [5d 9h] and won (₹23.11) 
+
+
+*********** # 9 **************
+PokerStars Hand #235510182: Hold'em No Limit (₹5/₹10 INR) - 2025/08/15 14:04:18 IST
+Table '4703573' 6-max Seat #3 is the button
+Seat 2: hdking2735 (₹1043.69 in chips)
+Seat 3: IronLivier809 (₹357.69 in chips)
+Seat 4: arnis39461 (₹891.84 in chips)
+Seat 5: hanumanhram (₹112.19 in chips)
+Seat 6: bhumee143 (₹113.56 in chips)
+arnis39461: posts small blind ₹5
+hanumanhram: posts big blind ₹10
+*** HOLE CARDS ***
+Dealt to IronLivier809 [5c Ts]
+bhumee143: folds
+hdking2735: calls ₹10
+IronLivier809: folds
+arnis39461: calls ₹5
+hanumanhram: checks
+*** FLOP *** [8s 3s Jc]
+arnis39461: checks
+hanumanhram: checks
+hdking2735: checks
+*** TURN *** [8s 3s Jc] [Ad]
+arnis39461: checks
+hanumanhram: checks
+hdking2735: bets ₹10
+arnis39461: raises ₹30 to ₹40
+hanumanhram: folds
+hdking2735: calls ₹30
+*** RIVER *** [8s 3s Jc Ad] [4d]
+arnis39461: checks
+hdking2735: checks
+*** SHOW DOWN ***
+hdking2735: shows [As Qd] (a pair of Aces)
+arnis39461: doesn't show hand
+hdking2735 collected ₹110 from pot
+*** SUMMARY ***
+Total pot ₹110 | Rake ₹6.49
+Board  [8s 3s Jc Ad 4d]
+Seat 2: hdking2735 showed [As Qd] and won (₹101.9) with a a pair of Aces
+Seat 3: IronLivier809 (button) folded before Flop (didn't bet)
+Seat 4: arnis39461 (small blind) lost
+Seat 5: hanumanhram (big blind) folded on the Turn (didn't bet)
+Seat 6: bhumee143 folded before Flop (didn't bet)
+
+
+*********** # 10 **************
+PokerStars Hand #235510116: Hold'em No Limit (₹5/₹10 INR) - 2025/08/15 14:03:57 IST
+Table '4703573' 6-max Seat #2 is the button
+Seat 2: hdking2735 (₹1043.69 in chips)
+Seat 3: IronLivier809 (₹362.69 in chips)
+Seat 4: arnis39461 (₹901.84 in chips)
+Seat 5: hanumanhram (₹112.19 in chips)
+Seat 6: bhumee143 (₹99.01 in chips)
+IronLivier809: posts small blind ₹5
+arnis39461: posts big blind ₹10
+*** HOLE CARDS ***
+Dealt to IronLivier809 [3c Qd]
+hanumanhram: folds
+bhumee143: raises ₹89.01 to ₹99.01 and is all-in
+hdking2735: folds
+IronLivier809: folds
+arnis39461: folds
+Uncalled bet (₹89.01) returned to bhumee143
+bhumee143 collected ₹24.55 from pot
+*** SUMMARY ***
+Total pot ₹114.01 | Rake ₹0
+Seat 2: hdking2735 (button) folded before Flop (didn't bet)
+Seat 3: IronLivier809 (small blind) folded before Flop (didn't bet)
+Seat 4: arnis39461 (big blind) folded before Flop (didn't bet)
+Seat 5: hanumanhram folded before Flop (didn't bet)
+Seat 6: bhumee143 showed [8h 8c] and won (₹24.55) 
+
+
+*********** # 11 **************
+PokerStars Hand #235509892: Hold'em No Limit (₹5/₹10 INR) - 2025/08/15 14:02:49 IST
+Table '4703573' 6-max Seat #6 is the button
+Seat 2: hdking2735 (₹1053.69 in chips)
+Seat 3: IronLivier809 (₹298 in chips)
+Seat 4: arnis39461 (₹921.84 in chips)
+Seat 5: hanumanhram (₹132.19 in chips)
+Seat 6: bhumee143 (₹119.01 in chips)
+hdking2735: posts small blind ₹5
+IronLivier809: posts big blind ₹10
+*** HOLE CARDS ***
+Dealt to IronLivier809 [9c 7h]
+arnis39461: calls ₹10
+hanumanhram: calls ₹10
+bhumee143: calls ₹10
+hdking2735: calls ₹5
+IronLivier809: checks
+*** FLOP *** [Kc 2d 9s]
+hdking2735: checks
+IronLivier809: checks
+arnis39461: checks
+hanumanhram: bets ₹10
+bhumee143: calls ₹10
+hdking2735: folds
+IronLivier809: calls ₹10
+arnis39461: calls ₹10
+*** TURN *** [Kc 2d 9s] [7c]
+IronLivier809: bets ₹50
+arnis39461: folds
+hanumanhram: folds
+bhumee143: folds
+Uncalled bet (₹50) returned to IronLivier809
+IronLivier809 collected ₹90 from pot
+*** SUMMARY ***
+Total pot ₹140 | Rake ₹5.31
+Board  [Kc 2d 9s 7c]
+Seat 2: hdking2735 (small blind) folded on the Flop
+Seat 3: IronLivier809 (big blind) showed [9c 7h] and won (₹84.69) 
+Seat 4: arnis39461 folded on the Turn
+Seat 5: hanumanhram folded on the Turn
+Seat 6: bhumee143 (button) folded on the Turn
+
+
+*********** # 12 **************
+PokerStars Hand #235509656: Hold'em No Limit (₹5/₹10 INR) - 2025/08/15 14:01:35 IST
+Table '4702182' 6-max Seat #6 is the button
+Seat 3: primtime8924287 (₹368.86 in chips)
+Seat 4: ro-hitt (₹150 in chips)
+Seat 5: ananya201 (₹357.69 in chips)
+Seat 6: IronLivier809 (₹293 in chips)
+primtime8924287: posts small blind ₹5
+ro-hitt: posts big blind ₹10
+*** HOLE CARDS ***
+Dealt to IronLivier809 [6s Qh]
+ananya201: folds
+IronLivier809: calls ₹10
+primtime8924287: calls ₹5
+ro-hitt: checks
+*** FLOP *** [9s 8c 7d]
+primtime8924287: checks
+ro-hitt: checks
+IronLivier809: checks
+*** TURN *** [9s 8c 7d] [Kh]
+primtime8924287: checks
+ro-hitt: checks
+IronLivier809: checks
+*** RIVER *** [9s 8c 7d Kh] [2c]
+primtime8924287: checks
+ro-hitt: bets ₹30
+IronLivier809: folds
+primtime8924287: folds
+Uncalled bet (₹30) returned to ro-hitt
+ro-hitt collected ₹29.45 from pot
+
+*** SUMMARY ***
+Total pot ₹60 | Rake ₹1.77
+Board  [9s 8c 7d Kh 2c]
+Seat 3: primtime8924287 (small blind) folded on the River
+Seat 4: ro-hitt (big blind) showed [Tc 6c] and won (₹27.68) 
+Seat 5: ananya201 folded before Flop (didn't bet)
+Seat 6: IronLivier809 (button) folded on the River
+
+
+*********** # 13 **************
+PokerStars Hand #235509542: Hold'em No Limit (₹5/₹10 INR) - 2025/08/15 14:01:00 IST
+Table '4702182' 6-max Seat #5 is the button
+Seat 3: primtime8924287 (₹360.3 in chips)
+Seat 5: ananya201 (₹357.69 in chips)
+Seat 6: IronLivier809 (₹303 in chips)
+IronLivier809: posts small blind ₹5
+primtime8924287: posts big blind ₹10
+*** HOLE CARDS ***
+Dealt to IronLivier809 [9d 5c]
+ananya201: folds
+IronLivier809: calls ₹5
+primtime8924287: checks
+*** FLOP *** [3c Qc Qs]
+IronLivier809: checks
+primtime8924287: checks
+*** TURN *** [3c Qc Qs] [7c]
+IronLivier809: checks
+primtime8924287: checks
+*** RIVER *** [3c Qc Qs 7c] [Jd]
+IronLivier809: checks
+primtime8924287: bets ₹110
+IronLivier809: folds
+Uncalled bet (₹110) returned to primtime8924287
+primtime8924287 collected ₹19.74 from pot
+
+*** SUMMARY ***
+Total pot ₹130 | Rake ₹1.18
+Board  [3c Qc Qs 7c Jd]
+Seat 3: primtime8924287 (big blind) showed [Qd 7s] and won (₹18.56) 
+Seat 5: ananya201 (button) folded before Flop (didn't bet)
+Seat 6: IronLivier809 (small blind) folded on the River
+
+
+*********** # 14 **************
+PokerStars Hand #235509414: Hold'em No Limit (₹5/₹10 INR) - 2025/08/15 14:00:20 IST
+Table '4702182' 6-max Seat #3 is the button
+Seat 1: prajkey867 (₹356.92 in chips)
+Seat 3: primtime8924287 (₹370.3 in chips)
+Seat 4: ro-hitt (₹45.54 in chips)
+Seat 5: ananya201 (₹309.6 in chips)
+Seat 6: IronLivier809 (₹303 in chips)
+ro-hitt: posts small blind ₹5
+ananya201: posts big blind ₹10
+*** HOLE CARDS ***
+Dealt to IronLivier809 [Td 6h]
+IronLivier809: folds
+prajkey867: folds
+primtime8924287: calls ₹10
+ro-hitt: calls ₹5
+ananya201: checks
+*** FLOP *** [9c Ks Jc]
+ro-hitt: checks
+ananya201: checks
+primtime8924287: checks
+*** TURN *** [9c Ks Jc] [7c]
+ro-hitt: bets ₹30
+ananya201: calls ₹30
+primtime8924287: folds
+*** RIVER *** [9c Ks Jc 7c] [3h]
+ro-hitt: raises ₹5.54 to ₹5.54 and is all-in
+ananya201: calls ₹5.54
+*** SHOW DOWN ***
+ro-hitt: shows [9s 2s] (a pair of Nines)
+ananya201: shows [6c Kd] (a pair of Kings)
+ananya201 collected ₹101.08 from pot
+*** SUMMARY ***
+Total pot ₹101.08 | Rake ₹5.96
+Board  [9c Ks Jc 7c 3h]
+Seat 1: prajkey867 folded before Flop (didn't bet)
+Seat 3: primtime8924287 (button) folded on the Turn
+Seat 4: ro-hitt (small blind) showed [9s 2s] and lost with a a pair of Nines
+Seat 5: ananya201 (big blind) showed [6c Kd] and won (₹93.63) with a a pair of Kings
+Seat 6: IronLivier809 folded before Flop (didn't bet)
+
+
+*********** # 15 **************
+PokerStars Hand #235509330: Hold'em No Limit (₹5/₹10 INR) - 2025/08/15 13:59:54 IST
+Table '4702182' 6-max Seat #1 is the button
+Seat 1: prajkey867 (₹331.92 in chips)
+Seat 3: primtime8924287 (₹375.3 in chips)
+Seat 4: ro-hitt (₹55.54 in chips)
+Seat 5: ananya201 (₹309.6 in chips)
+Seat 6: IronLivier809 (₹313 in chips)
+primtime8924287: posts small blind ₹5
+ro-hitt: posts big blind ₹10
+*** HOLE CARDS ***
+Dealt to IronLivier809 [3s 7s]
+ananya201: folds
+IronLivier809: calls ₹10
+prajkey867: raises ₹30 to ₹40
+primtime8924287: folds
+ro-hitt: folds
+IronLivier809: folds
+Uncalled bet (₹30) returned to prajkey867
+prajkey867 collected ₹35 from pot
+*** SUMMARY ***
+Total pot ₹65 | Rake ₹0
+Seat 1: prajkey867 (button) showed [Ac 3c] and won (₹35) 
+Seat 3: primtime8924287 (small blind) folded before Flop (didn't bet)
+Seat 4: ro-hitt (big blind) folded before Flop (didn't bet)
+Seat 5: ananya201 folded before Flop (didn't bet)
+Seat 6: IronLivier809 folded before Flop
+
+
+*********** # 16 **************
+PokerStars Hand #235509183: Hold'em No Limit (₹5/₹10 INR) - 2025/08/15 13:59:08 IST
+Table '4702182' 6-max Seat #6 is the button
+Seat 1: prajkey867 (₹296.05 in chips)
+Seat 3: primtime8924287 (₹405.3 in chips)
+Seat 4: ro-hitt (₹55.54 in chips)
+Seat 5: ananya201 (₹319.6 in chips)
+Seat 6: IronLivier809 (₹313 in chips)
+prajkey867: posts small blind ₹5
+primtime8924287: posts big blind ₹10
+*** HOLE CARDS ***
+Dealt to IronLivier809 [Ah 4c]
+ro-hitt: folds
+ananya201: calls ₹10
+IronLivier809: folds
+prajkey867: calls ₹5
+primtime8924287: checks
+*** FLOP *** [6s Td 6d]
+prajkey867: checks
+primtime8924287: checks
+ananya201: checks
+*** TURN *** [6s Td 6d] [7s]
+prajkey867: bets ₹20
+primtime8924287: calls ₹20
+ananya201: folds
+*** RIVER *** [6s Td 6d 7s] [Jc]
+prajkey867: bets ₹60
+primtime8924287: folds
+Uncalled bet (₹60) returned to prajkey867
+prajkey867 collected ₹70 from pot
+
+*** SUMMARY ***
+Total pot ₹130 | Rake ₹4.13
+Board  [6s Td 6d 7s Jc]
+Seat 1: prajkey867 (small blind) showed [8s 6h] and won (₹65.87) 
+Seat 3: primtime8924287 (big blind) folded on the River
+Seat 4: ro-hitt folded before Flop (didn't bet)
+Seat 5: ananya201 folded on the Turn
+Seat 6: IronLivier809 (button) folded before Flop (didn't bet)
+
+
+*********** # 17 **************
+PokerStars Hand #235509075: Hold'em No Limit (₹5/₹10 INR) - 2025/08/15 13:58:38 IST
+Table '4702182' 6-max Seat #5 is the button
+Seat 1: prajkey867 (₹268.41 in chips)
+Seat 3: primtime8924287 (₹415.3 in chips)
+Seat 4: ro-hitt (₹55.54 in chips)
+Seat 5: ananya201 (₹329.6 in chips)
+Seat 6: IronLivier809 (₹323 in chips)
+IronLivier809: posts small blind ₹5
+prajkey867: posts big blind ₹10
+*** HOLE CARDS ***
+Dealt to IronLivier809 [5d As]
+primtime8924287: calls ₹10
+ro-hitt: folds
+ananya201: calls ₹10
+IronLivier809: calls ₹5
+prajkey867: checks
+*** FLOP *** [6h 9c 2d]
+IronLivier809: checks
+prajkey867: bets ₹20
+primtime8924287: folds
+ananya201: folds
+IronLivier809: folds
+Uncalled bet (₹20) returned to prajkey867
+prajkey867 collected ₹40 from pot
+*** SUMMARY ***
+Total pot ₹60 | Rake ₹2.36
+Board  [6h 9c 2d]
+Seat 1: prajkey867 (big blind) showed [6d 3c] and won (₹37.64) 
+Seat 3: primtime8924287 folded on the Flop
+Seat 4: ro-hitt folded before Flop (didn't bet)
+Seat 5: ananya201 (button) folded on the Flop
+Seat 6: IronLivier809 (small blind) folded on the Flop
+
+
+*********** # 18 **************
+PokerStars Hand #235508859: Hold'em No Limit (₹5/₹10 INR) - 2025/08/15 13:57:28 IST
+Table '4702182' 6-max Seat #4 is the button
+Seat 1: prajkey867 (₹308.41 in chips)
+Seat 3: primtime8924287 (₹321.78 in chips)
+Seat 4: ro-hitt (₹87.11 in chips)
+Seat 5: ananya201 (₹334.6 in chips)
+Seat 6: IronLivier809 (₹363 in chips)
+ananya201: posts small blind ₹5
+IronLivier809: posts big blind ₹10
+*** HOLE CARDS ***
+Dealt to IronLivier809 [7h Qd]
+prajkey867: calls ₹10
+primtime8924287: calls ₹10
+ro-hitt: raises ₹30 to ₹40
+ananya201: folds
+IronLivier809: calls ₹30
+prajkey867: calls ₹30
+primtime8924287: calls ₹30
+*** FLOP *** [Jc 4h Jd]
+IronLivier809: checks
+prajkey867: checks
+primtime8924287: checks
+ro-hitt: raises ₹47.11 to ₹47.11 and is all-in
+IronLivier809: folds
+prajkey867: folds
+primtime8924287: calls ₹47.11
+*** TURN *** [Jc 4h Jd] [Qh]
+*** RIVER *** [Jc 4h Jd Qh] [Ah]
+*** SHOW DOWN ***
+primtime8924287: shows [Ad 9d] (two pair, Aces and Jacks)
+primtime8924287 cashed out the hand for ₹183.52
+ro-hitt: shows [7s As] (two pair, Aces and Jacks)
+ro-hitt cashed out the hand for ₹55.54
+*** SUMMARY ***
+Total pot ₹259.22 | Rake ₹15.29
+Board  [Jc 4h Jd Qh Ah]
+Seat 1: prajkey867 folded on the Flop
+Seat 3: primtime8924287 showed [Ad 9d] and lost with a two pair, Aces and Jacks (cashed out)
+Seat 4: ro-hitt (button) showed [7s As] and lost with a two pair, Aces and Jacks (cashed out)
+Seat 5: ananya201 (small blind) folded before Flop (didn't bet)
+Seat 6: IronLivier809 (big blind) folded on the Flop
+
+
+*********** # 19 **************
+PokerStars Hand #235508751: Hold'em No Limit (₹5/₹10 INR) - 2025/08/15 13:56:52 IST
+Table '4702182' 6-max Seat #3 is the button
+Seat 1: prajkey867 (₹308.41 in chips)
+Seat 3: primtime8924287 (₹321.78 in chips)
+Seat 4: ro-hitt (₹70 in chips)
+Seat 5: ananya201 (₹354.6 in chips)
+Seat 6: IronLivier809 (₹363 in chips)
+ro-hitt: posts small blind ₹5
+ananya201: posts big blind ₹10
+*** HOLE CARDS ***
+Dealt to IronLivier809 [Kc 5d]
+IronLivier809: folds
+prajkey867: folds
+primtime8924287: folds
+ro-hitt: calls ₹5
+ananya201: checks
+*** FLOP *** [4c Th 6h]
+ro-hitt: checks
+ananya201: checks
+*** TURN *** [4c Th 6h] [7s]
+ro-hitt: bets ₹10
+ananya201: calls ₹10
+*** RIVER *** [4c Th 6h 7s] [Ts]
+ro-hitt: bets ₹40
+ananya201: folds
+Uncalled bet (₹40) returned to ro-hitt
+ro-hitt collected ₹39.47 from pot
+
+*** SUMMARY ***
+Total pot ₹80 | Rake ₹2.36
+Board  [4c Th 6h 7s Ts]
+Seat 1: prajkey867 folded before Flop (didn't bet)
+Seat 3: primtime8924287 (button) folded before Flop (didn't bet)
+Seat 4: ro-hitt (small blind) showed [7h 9c] and won (₹37.11) 
+Seat 5: ananya201 (big blind) folded on the River
+Seat 6: IronLivier809 folded before Flop (didn't bet)
+
+
+*********** # 20 **************
+PokerStars Hand #235508574: Hold'em No Limit (₹5/₹10 INR) - 2025/08/15 13:55:55 IST
+Table '4702182' 6-max Seat #1 is the button
+Seat 1: prajkey867 (₹223.74 in chips)
+Seat 3: primtime8924287 (₹326.78 in chips)
+Seat 4: ro-hitt (₹150 in chips)
+Seat 5: ananya201 (₹364.6 in chips)
+Seat 6: IronLivier809 (₹363 in chips)
+primtime8924287: posts small blind ₹5
+ro-hitt: posts big blind ₹10
+*** HOLE CARDS ***
+Dealt to IronLivier809 [4s Jc]
+ananya201: calls ₹10
+IronLivier809: folds
+prajkey867: raises ₹30 to ₹40
+primtime8924287: folds
+ro-hitt: calls ₹30
+ananya201: folds
+*** FLOP *** [Qh 4c 2c]
+ro-hitt: checks
+prajkey867: checks
+*** TURN *** [Qh 4c 2c] [Ac]
+ro-hitt: checks
+prajkey867: bets ₹40
+ro-hitt: calls ₹40
+*** RIVER *** [Qh 4c 2c Ac] [Jd]
+ro-hitt: checks
+prajkey867: bets ₹87.5
+ro-hitt: folds
+Uncalled bet (₹87.5) returned to prajkey867
+prajkey867 collected ₹175 from pot
+
+*** SUMMARY ***
+Total pot ₹262.5 | Rake ₹10.33
+Board  [Qh 4c 2c Ac Jd]
+Seat 1: prajkey867 (button) showed [Qd Kd] and won (₹164.67) 
+Seat 3: primtime8924287 (small blind) folded before Flop (didn't bet)
+Seat 4: ro-hitt (big blind) folded on the River
+Seat 5: ananya201 folded before Flop
+Seat 6: IronLivier809 folded before Flop (didn't bet)
+
+
