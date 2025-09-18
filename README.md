@@ -7,8 +7,8 @@ Currently it works only with PokerStars -I've added a sample file in the repo.[h
  take upto 2 minutes
 ## What It is
 
-It's very simple. It's a dumb website(No ML) with a vibecoded frontend where you can upload your Poker hand history from your online sessions.
-What it will do is show you the pot odds and pot equity for each of your calls/bets/raises, for all your hands and all streets(PREFLOP,FLOP,TURN,RIVER)-where you bet.
+It's very simple. It's a dumb website (No ML) with a vibecoded frontend where you can upload your Poker hand history from your online sessions.
+What it will do is show you the pot odds and pot equity for each of your calls/bets/raises, for all your hands and all streets(PREFLOP, FLOP, TURN, RIVER)-where you bet.
 
 It has python backend with a Flask framework and HTML frontend
 
